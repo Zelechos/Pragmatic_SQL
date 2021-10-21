@@ -371,6 +371,11 @@ a{
         width: 90%;
     }    
 
+    .img-timiline{
+        width: 100%;
+        border-radius: 5px;
+    }
+
 }
 
 @media (min-width: 1200px) {
