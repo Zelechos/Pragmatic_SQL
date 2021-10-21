@@ -270,10 +270,6 @@ a{
 /*Corregir formulario*/
 @media only screen and (min-width: 992px){
 
-    *{
-        background-color: red;
-    }
-
     .timeline::before{
         content: "";
         position: absolute;
@@ -342,9 +338,8 @@ a{
 @media (min-width: 576px) {
 }
 
-@media (max-width: 992px) {
+@media (min-width: 280px) {
     .container{
-    background-color: green;
     padding-top: 80px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
