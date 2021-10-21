@@ -335,6 +335,30 @@ a{
         top: -30px;
     }
 
+    
+
+}
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 992px) {
+    .container{
+    background-color: green;
+    padding-top: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        'forms	  forms      forms'
+        'timeline	  timeline      timeline'
+
+    }
+
+
+    .example{
+        position: inherit;
+    }
+
     .timeline{
         width: 90%;
         margin-left: auto;
@@ -360,27 +384,6 @@ a{
         width: 100%;
         border-radius: 5px;
     }
-
-}
-
-@media (min-width: 576px) {
-}
-
-@media (max-width: 992px) {
-    .container{
-    padding-top: 80px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-        'forms	  forms      forms'
-        'timeline	  timeline      timeline'
-
-    }
-
-    .example{
-        position: inherit;
-    }
-
     
 }
 
