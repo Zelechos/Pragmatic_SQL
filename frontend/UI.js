@@ -34,9 +34,8 @@ class UI{
             
                         <h3 class="solution">${element.subtitle}</h3>
                         <img src="${element.imagePath}" alt="" class="img-timiline">
-                        <p>
-                        ${element.description}
-                        </p>
+                        <script src="${element.description}"></script>
+                        
 
                         <div class="img-separator"></div>
 
