@@ -161,7 +161,7 @@ a{
     font-size: 20px;
     position: fixed;
     top: 20px;
-    z-index: 2;
+    z-index: 10;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -337,16 +337,40 @@ a{
 
 @media (max-width: 992px) {
     .container{
+    padding-top: 80px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
         'forms	  forms      forms'
         'timeline	  timeline      timeline'
+
     }
 
     .example{
         position: inherit;
     }
+
+    .timeline{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-content{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: initial;
+    }
+
+    .timeline-content .btn-delete{
+        margin-left: 250px;
+    }
+
+    .formulario{
+        width: 90%;
+    }    
+
 }
 
 @media (min-width: 1200px) {
