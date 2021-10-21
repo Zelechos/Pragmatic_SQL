@@ -28,7 +28,7 @@ module.exports = {
                 removeComments: true,
                 removeRedundantAttributes: true,
                 removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
+                // removeStyleLinkTypeAttributes: true,
                 useShortDoctype:true
             }
         }),
