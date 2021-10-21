@@ -338,7 +338,7 @@ a{
 @media (min-width: 576px) {
 }
 
-@media (min-width: 280px) {
+@media (max-width: 992px) {
     .container{
     padding-top: 80px;
     grid-template-columns: repeat(3, 1fr);
