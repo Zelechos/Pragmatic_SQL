@@ -1,5 +1,6 @@
 class Bookservice{
     
+    // Constructor de BookService
     constructor(){
         // aqui obtenemos la direccion de donde estas nuestra API REST
         this.URI = '/api/books';
