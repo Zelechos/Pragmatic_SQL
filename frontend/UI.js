@@ -13,7 +13,8 @@ class UI{
         if(books.length === 0){
             form.style.display = "none";
         }else{
-            form.style.display = "block";
+            // form.style.display = "block"; esto evita que se vea el buscador
+            form.style.display = "none";
         }
         
         console.log(books.length);
