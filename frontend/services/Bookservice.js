@@ -1,3 +1,4 @@
+// Creamos Nuestros servicios
 class Bookservice{
     
     // Constructor de BookService
@@ -7,9 +8,12 @@ class Bookservice{
     }
 
     // Methods para interactruar en el backend
+
     async getBook(){
         const response = await fetch(this.URI);
-        const books = await response.json();//convertimos nuestra respuesta a json para manipular los datos
+
+        //convertimos nuestra respuesta a json para manipular los datos
+        const books = await response.json();
         return books;
     }
 
@@ -18,7 +22,9 @@ class Bookservice{
             method: 'POST',
             body: book
         });
-        const data = await response.json();//convertimos nuestra respuesta a json para manipular los datos
+
+        //convertimos nuestra respuesta a json para manipular los datos
+        const data = await response.json();
         console.log(data);
         // return data;
     }
@@ -30,10 +36,12 @@ class Bookservice{
             },
             method: 'DELETE'
         });
-        const data = await response.json();//convertimos nuestra respuesta a json para manipular los datos
+        
+        //convertimos nuestra respuesta a json para manipular los datos
+        const data = await response.json();
         console.log(data);        
     }
 }
 
-
+// Aqui exportamos nuestro servicio
 export default Bookservice;
