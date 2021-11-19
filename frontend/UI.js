@@ -1,3 +1,4 @@
+// importamos nuestro Servicios
 import Bookservice from './services/Bookservice';
 
 // Instanciamos nuestros servicios
@@ -62,12 +63,13 @@ class UI{
         document.getElementById('book-form').reset();
     }
 
-    // devuelve la cantidad de datod
+    // devuelve la cantidad de datos
     async lengthBooks(){
         const data = await bookService.getBook();
         return data.length;
     }
 
+    // llamamos a nuestra peticion asicrona delete datos y luego renderizamod los datos
     async deleteBook(id){
         await bookService.deleteBook(id);
         this.renderBooks();
