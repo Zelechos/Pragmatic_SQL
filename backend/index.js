@@ -19,6 +19,7 @@ app.set('port', process.env.PORT || 3000);
 
 // --------- Middlewares-----------
 app.use(morgan('dev'));
+
 // storage sirve para almacenar las imagenes del usuario
 const storage = multer.diskStorage({
     destination : path.join(__dirname,'public/uploads'),
@@ -26,6 +27,7 @@ const storage = multer.diskStorage({
         callback(null, new Date().getTime() + path.extname(file.originalname));
     }
 });
+
 // le pasamos nuestro storage a multer para las imagenes
 // single() para enviar una sola imagen a la vez
 app.use(multer({ storage }).single('image'));

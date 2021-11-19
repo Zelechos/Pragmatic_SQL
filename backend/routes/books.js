@@ -26,6 +26,7 @@ router.post('/', async (request, response) => {
 // method delete
 router.delete('/:id', async (request, response) =>{
     const book = await Book.findByIdAndDelete(request.params.id);
+    // aqui eliminamo la imagen del la carpeta uplods dado que la tarea ya no existe
     unlink(path.resolve('./backend/public/'+ book.imagePath));
     response.json({message:'Book deleted'});
 });
