@@ -19,6 +19,7 @@ app.set('port', process.env.PORT || 3000);
 
 // --------- Middlewares-----------
 app.use(morgan('dev'));
+
 // storage sirve para almacenar las imagenes del usuario
 const storage = multer.diskStorage({
     destination : path.join(__dirname,'public/uploads'),
@@ -44,8 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //-------- Iniciamos el servidor --------
 
-// aqui inicializamos el puerto
+// aqui inicializamos el puerto para empezar el desarrollo
 app.listen(app.get('port'), ()=>{
     console.log(`server ready in port => ${app.get('port')}`);
 });
-

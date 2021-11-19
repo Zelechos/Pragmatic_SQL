@@ -1,3 +1,4 @@
+// Importamos mongoose para trabajar en la BD
 const { Schema , model } = require('mongoose');
 
 const BookSchema = new Schema({
@@ -8,5 +9,5 @@ const BookSchema = new Schema({
     created_at: {type:Date, default: Date.now}
 });
 
-// exportamos el model
+// exportamos el modelo
 module.exports = model('Book', BookSchema);
