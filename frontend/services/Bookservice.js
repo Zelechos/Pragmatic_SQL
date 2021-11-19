@@ -3,12 +3,13 @@ class Bookservice{
     
     // Constructor de BookService
     constructor(){
-        // aqui obtenemos la direccion de donde estas nuestra API REST
+        // aqui obtenemos la direccion URL de donde estas nuestra API REST
         this.URI = '/api/books';
     }
 
     // Methods para interactruar en el backend
 
+    // peticion asincrona GET
     async getBook(){
         const response = await fetch(this.URI);
 
@@ -17,6 +18,7 @@ class Bookservice{
         return books;
     }
 
+    // peticion asincrona POST
     async postBook(book){
         const response = await fetch(this.URI, {
             method: 'POST',
@@ -29,6 +31,7 @@ class Bookservice{
         // return data;
     }
 
+    // peticion asincrona DELETE
     async deleteBook(Id){
         const response = await fetch(`${this.URI}/${Id}`,{
             headers: {
@@ -41,6 +44,9 @@ class Bookservice{
         const data = await response.json();
         console.log(data);        
     }
+
+    // peticion asincrona UPDATE (pendiente....)
+
 }
 
 // Aqui exportamos nuestro servicio
