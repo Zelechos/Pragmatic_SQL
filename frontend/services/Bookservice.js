@@ -47,12 +47,15 @@ class Bookservice {
     // ==============================================================
     // peticion asincrona UPDATE
     async updateBook(Id, book) {
-        const response = await fetch(`${this.URI}/${Id}`, {});
+        const response = await fetch(`${this.URI}/${Id}`, {
+            method: "PUT",
+            body: book,
+        });
 
         //convertimos nuestra respuesta a json para manipular los datos
         const data = await response.json();
         console.log(data);
-        // return data;
+        return data;
     }
 
     // peticion asincrona GET tarea unica

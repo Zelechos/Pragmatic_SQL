@@ -26,9 +26,7 @@ class UI {
             li.innerHTML = `
             <!--Contenido de linea de tiempo-->
                 <div class="timeline-content ">
-                    <a href="#" class="btn-secondary" _id="${
-                        element._id
-                    }">Edit</a>
+                    <a href="#" class="btn-edit" _id="${element._id}">Edit</a>
                     
                     <a href="#" class="btn-delete" _id="${element._id}">X</a>
                     
@@ -84,11 +82,20 @@ class UI {
     // devuelve una sola tarea con un id especificado
     async getBookUnique(id) {
         console.log(id, " Esto es evento editar");
-        await bookService.getBookUnique(id);
+        const dataEdit = await bookService.getBookUnique(id);
+        console.log(dataEdit, "Estos son datos para editar");
+        console.log(dataEdit.id);
+        console.log(dataEdit.title);
+        console.log(dataEdit.description);
+        document.getElementById("title").value = dataEdit.title;
+        document.getElementById("subtitle").value = dataEdit.subtitle;
+        document.getElementById("description").value = dataEdit.description;
+        document.getElementById("save-update").innerHTML = "Update";
     }
     // actualizamos los datos en la base de datos
     async updateBook(id, book) {
         await bookService.updateBook(id, book);
+        this.clearBookForm();
         this.renderBooks();
     }
 }
