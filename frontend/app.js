@@ -21,12 +21,16 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
     formData.append("subtitle", subtitle);
     formData.append("image", image[0]);
 
-    const userInterface = new UI();
-    userInterface.addANewBook(formData);
+    // const userInterface = new UI();
+    // userInterface.addANewBook(formData);
     // ==================================================================
-    if (event.target.classList.contains("btn-edit")) {
+    const idHidden = document.getElementById("idHidden").value;
+    if (idHidden != "") {
         const userInterface = new UI();
-        userInterface.updateBook(event.target.getAttribute("_id"), formData);
+        userInterface.updateBook(idHidden, formData);
+    } else {
+        const userInterface = new UI();
+        userInterface.addANewBook(formData);
     }
     // ==================================================================
     // al momento de enviar el formuluario ya no se reinicia el navegador
@@ -50,6 +54,7 @@ document
         if (event.target.classList.contains("btn-edit")) {
             const userInterface = new UI();
             userInterface.getBookUnique(event.target.getAttribute("_id"));
+            document.getElementById("image").style.cssText = "background:red;";
         }
         event.preventDefault();
     });
