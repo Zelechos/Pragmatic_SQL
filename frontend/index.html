@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks</title>
-    <link rel="shortcut icon" href="./assets/aside.gif" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="./styles/main-style.css"> -->
-</head>
-<body>
-    <!--Contenedor-->
-    <header class="head">
-    </header>
-    <section>
-        <div class="container">
-    
-            <div class="form-content">
-                <form id="book-form" class="">
-                    <h3>Los Datos del Blog</h3>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tasks</title>
+        <link
+            rel="shortcut icon"
+            href="./assets/aside.gif"
+            type="image/x-icon"
+        />
+        <!-- <link rel="stylesheet" href="./styles/main-style.css"> -->
+    </head>
+    <body>
+        <!--Contenedor-->
+        <header class="head"></header>
+        <section>
+            <div class="container">
+                <div class="form-content">
+                    <form id="book-form" class="">
+                        <h3>Los Datos del Blog</h3>
 
-                    <div class="img-separator"></div>
-                    <br>
+                        <div class="img-separator"></div>
+                        <br />
 
-                    <input type="text" id="title" class="form-control" placeholder="Title" autofocus>
-                    <input type="text" id="subtitle" class="form-control" placeholder="Subtitle" autofocus>
-                    <input type="text" id="description" class="form-control" placeholder="Description" autofocus>
+                        <input type="hidden" id="idHidden" />
 
-                    <div class="img-separator"></div>
-                    <br>
+                        <input
+                            type="text"
+                            id="title"
+                            class="form-control"
+                            placeholder="Title"
+                            autofocus
+                        />
+                        <input
+                            type="text"
+                            id="subtitle"
+                            class="form-control"
+                            placeholder="Subtitle"
+                            autofocus
+                        />
+                        <input
+                            type="text"
+                            id="description"
+                            class="form-control"
+                            placeholder="Description"
+                            autofocus
+                        />
 
-                    <input type="file" id="image" class="form-control" placeholder="Image" required>
+                        <div class="img-separator"></div>
+                        <br />
 
-                    <button class="btn">Save</button>
-                </form>
+                        <input
+                            type="file"
+                            id="image"
+                            class="form-control"
+                            placeholder="Image"
+                        />
+
+                        <button class="btn" id="save-update">Save</button>
+                    </form>
+                </div>
+
+                <!--Linea de Tiempo-->
+                <div class="timeline">
+                    <input
+                        type="search"
+                        class="formulario"
+                        placeholder="Buscar Codigo ..."
+                        id="form"
+                    />
+                    <ul id="automata-content"></ul>
+                </div>
             </div>
-
-            <!--Linea de Tiempo-->
-            <div class="timeline">
-                <input type="search" class="formulario" placeholder="Buscar Codigo ..." id="form" >
-                <ul id="automata-content">
-                </ul>
-            </div>
-        </div>
-    </section>
-</body>
+        </section>
+    </body>
 </html>

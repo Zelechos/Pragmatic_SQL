@@ -1,16 +1,15 @@
 // Creamos Nuestros servicios
-class Bookservice{
-    
+class Bookservice {
     // Constructor de BookService
-    constructor(){
+    constructor() {
         // aqui obtenemos la direccion URL de donde estas nuestra API REST
-        this.URI = '/api/books';
+        this.URI = "/api/books";
     }
 
     // Methods para interactruar en el backend
 
     // peticion asincrona GET
-    async getBook(){
+    async getBook() {
         const response = await fetch(this.URI);
 
         //convertimos nuestra respuesta a json para manipular los datos
@@ -19,10 +18,10 @@ class Bookservice{
     }
 
     // peticion asincrona POST
-    async postBook(book){
+    async postBook(book) {
         const response = await fetch(this.URI, {
-            method: 'POST',
-            body: book
+            method: "POST",
+            body: book,
         });
 
         //convertimos nuestra respuesta a json para manipular los datos
@@ -32,21 +31,42 @@ class Bookservice{
     }
 
     // peticion asincrona DELETE
-    async deleteBook(Id){
-        const response = await fetch(`${this.URI}/${Id}`,{
+    async deleteBook(Id) {
+        const response = await fetch(`${this.URI}/${Id}`, {
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
             },
-            method: 'DELETE'
+            method: "DELETE",
         });
-        
+
         //convertimos nuestra respuesta a json para manipular los datos
         const data = await response.json();
-        console.log(data);        
+        console.log(data);
     }
 
-    // peticion asincrona UPDATE (pendiente....)
+    // ==============================================================
+    // peticion asincrona UPDATE
+    async updateBook(Id, book) {
+        const response = await fetch(`${this.URI}/${Id}`, {
+            method: "PUT",
+            body: book,
+        });
 
+        //convertimos nuestra respuesta a json para manipular los datos
+        const data = await response.json();
+        console.log(data);
+        return data;
+    }
+
+    // peticion asincrona GET tarea unica
+    async getBookUnique(Id, book) {
+        const response = await fetch(`${this.URI}/${Id}`);
+
+        //convertimos nuestra respuesta a json para manipular los datos
+        const data = await response.json();
+        console.log(data);
+        return data;
+    }
 }
 
 // Aqui exportamos nuestro servicio
