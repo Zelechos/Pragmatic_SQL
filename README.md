@@ -15,9 +15,9 @@ Una web de publicaciones de código en imágenes para aprender y compartir mi co
   npm i fs-extra
 ```
 
-#### 2. Para ejecutar la app
+#### 2. Para ejecutar la app en modo desarrollador usamos 
 ```
-  node backend/index.js
+  npm run dev
 ```
 
 #### 3. Para ejecutar la base de datos tiene que tener instalado mongodb en una consola bash (por ejemplo tu git bash) ejecutar el siguiente comando

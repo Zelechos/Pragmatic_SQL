@@ -1,5 +1,5 @@
 // importamos nuestro Servicios
-import Bookservice from "./services/Bookservice";
+import Bookservice from './services/Bookservice';
 
 // Instanciamos nuestros servicios
 const bookService = new Bookservice();
@@ -32,7 +32,6 @@ class UI {
                     
                     <a href="./code.html" target="_blank">
                         <h1>${element.title}</h1>
-                        
                         <div class="img-separator"></div><br>
             
                         <h3 class="solution">${element.subtitle}</h3>
@@ -67,13 +66,14 @@ class UI {
     }
 
     // devuelve la cantidad de datos
-    async lengthBooks() {
+    async lengthBooks(){
         const data = await bookService.getBook();
         return data.length;
     }
 
     // llamamos a nuestra peticion asicrona delete datos y luego renderizamod los datos
-    async deleteBook(id) {
+
+    async deleteBook(id){
         await bookService.deleteBook(id);
         this.renderBooks();
     }
