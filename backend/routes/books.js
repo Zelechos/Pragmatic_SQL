@@ -42,11 +42,11 @@ router.get("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
     const { title, description, subtitle } = req.body;
     // const imagePath = "/uploads/" + request.file.filename;
-    const imagePath = "/uploads/1637715862233.png";
+    // const imagePath = "/uploads/" + req.file.filename;
     // const newBook = new Book();
     const book = await Book.findByIdAndUpdate(
         { _id: req.params.id },
-        { title, description, subtitle, imagePath }
+        { title, description, subtitle }
         // (err) => {
         //     if (err)
         //         return res.status(400).json({
