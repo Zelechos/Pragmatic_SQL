@@ -81,20 +81,19 @@ class UI {
     // ======================================================
     // devuelve una sola tarea con un id especificado
     async getBookUnique(id) {
-        console.log(id, " Esto es evento editar");
+        // ocultamos el input de imagen
+        document.getElementById("image").style.display = "none";
+
         const dataEdit = await bookService.getBookUnique(id);
-        console.log(dataEdit, "Estos son datos para editar");
-        console.log(dataEdit._id);
-        console.log(dataEdit.title);
-        console.log(dataEdit.description);
+        
         document.getElementById("idHidden").value = dataEdit._id;
         document.getElementById("title").value = dataEdit.title;
         document.getElementById("subtitle").value = dataEdit.subtitle;
         document.getElementById("description").value = dataEdit.description;
-        document.getElementById("image") = dataEdit.imagePath;
+
         document.getElementById("save-update").innerHTML = "Update";
-        console.log(dataEdit.image, "Esto e sla imagen");
     }
+    
     // actualizamos los datos en la base de datos
     async updateBook(id, book) {
         await bookService.updateBook(id, book);

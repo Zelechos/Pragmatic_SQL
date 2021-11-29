@@ -34,7 +34,7 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
     }
     // ==================================================================
     // al momento de enviar el formuluario ya no se reinicia el navegador
-    event.preventDefault();
+    // event.preventDefault();
 });
 
 document
@@ -44,7 +44,7 @@ document
             const userInterface = new UI();
             userInterface.deleteBook(event.target.getAttribute("_id"));
         }
-        event.preventDefault();
+        // event.preventDefault();
     });
 
 // =======================================================================
@@ -54,21 +54,15 @@ document
         if (event.target.classList.contains("btn-edit")) {
             const userInterface = new UI();
             userInterface.getBookUnique(event.target.getAttribute("_id"));
-            document.getElementById("image").style.cssText = "background:red;";
         }
         event.preventDefault();
     });
 
-function updateBook() {
-    document
-        .getElementById("automata-content")
-        .addEventListener("click", (event) => {
-            if (event.target.classList.contains("btn-edit")) {
-                const userInterface = new UI();
-                userInterface.updateBook(
-                    event.target.getAttribute("_id"),
-                    formData
-                );
-            }
-        });
-}
+document
+    .getElementById("automata-content")
+    .addEventListener("click", (event) => {
+        if (event.target.classList.contains("btn-edit")) {
+            const userInterface = new UI();
+            userInterface.updateBook(event.target.getAttribute("_id"), formData);
+        }
+    });
