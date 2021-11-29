@@ -37,9 +37,7 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
     // event.preventDefault();
 });
 
-document
-    .getElementById("automata-content")
-    .addEventListener("click", (event) => {
+document.getElementById("automata-content").addEventListener("click", (event) => {
         if (event.target.classList.contains("btn-delete")) {
             const userInterface = new UI();
             userInterface.deleteBook(event.target.getAttribute("_id"));
@@ -47,10 +45,7 @@ document
         // event.preventDefault();
     });
 
-// =======================================================================
-document
-    .getElementById("automata-content")
-    .addEventListener("click", (event) => {
+document.getElementById("automata-content").addEventListener("click", (event) => {
         if (event.target.classList.contains("btn-edit")) {
             const userInterface = new UI();
             userInterface.getBookUnique(event.target.getAttribute("_id"));
@@ -58,9 +53,7 @@ document
         event.preventDefault();
     });
 
-document
-    .getElementById("automata-content")
-    .addEventListener("click", (event) => {
+document.getElementById("automata-content").addEventListener("click", (event) => {
         if (event.target.classList.contains("btn-edit")) {
             const userInterface = new UI();
             userInterface.updateBook(event.target.getAttribute("_id"), formData);
