@@ -25,7 +25,7 @@ class UI {
             const li = document.createElement("li");
             li.innerHTML = `
             <!--Contenido de linea de tiempo-->
-                <div class="timeline-content ">
+                <div class="timeline-content">
                     <a href="#" class="btn-edit" _id="${element._id}">Edit</a>
                     
                     <a href="#" class="btn-delete" _id="${element._id}">X</a>
@@ -65,6 +65,19 @@ class UI {
         document.getElementById("book-form").reset();
     }
 
+    formStateSave(){
+        document.getElementById("form-title").innerHTML = "Ingrese los datos de la Tarea";
+        document.getElementById("save-update").innerHTML = "Save";
+        document.getElementById("image").style.display = "block";
+    }
+
+    // para ocultar la imagen y cambiar el nombre del boton
+    formStateUpdate(){
+        document.getElementById("form-title").innerHTML = "Actualizando los datos de la Tarea";
+        document.getElementById("save-update").innerHTML = "Update";
+        document.getElementById("image").style.display = "none";
+    }
+
     // devuelve la cantidad de datos
     async lengthBooks(){
         const data = await bookService.getBook();
@@ -82,7 +95,7 @@ class UI {
     // devuelve una sola tarea con un id especificado
     async getBookUnique(id) {
         // ocultamos el input de imagen
-        document.getElementById("image").style.display = "none";
+        this.formStateUpdate();
 
         const dataEdit = await bookService.getBookUnique(id);
         
@@ -90,13 +103,12 @@ class UI {
         document.getElementById("title").value = dataEdit.title;
         document.getElementById("subtitle").value = dataEdit.subtitle;
         document.getElementById("description").value = dataEdit.description;
-
-        document.getElementById("save-update").innerHTML = "Update";
     }
     
     // actualizamos los datos en la base de datos
     async updateBook(id, book) {
         await bookService.updateBook(id, book);
+        this.formStateSave();
         this.clearBookForm();
         this.renderBooks();
     }

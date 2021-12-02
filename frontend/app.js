@@ -34,7 +34,7 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
     }
     // ==================================================================
     // al momento de enviar el formuluario ya no se reinicia el navegador
-    // event.preventDefault();
+    event.preventDefault();
 });
 
 document.getElementById("automata-content").addEventListener("click", (event) => {
@@ -42,7 +42,7 @@ document.getElementById("automata-content").addEventListener("click", (event) =>
             const userInterface = new UI();
             userInterface.deleteBook(event.target.getAttribute("_id"));
         }
-        // event.preventDefault();
+        event.preventDefault();
     });
 
 document.getElementById("automata-content").addEventListener("click", (event) => {
@@ -58,4 +58,5 @@ document.getElementById("automata-content").addEventListener("click", (event) =>
             const userInterface = new UI();
             userInterface.updateBook(event.target.getAttribute("_id"), formData);
         }
+        event.preventDefault();
     });
