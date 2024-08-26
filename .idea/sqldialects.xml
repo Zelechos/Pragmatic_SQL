@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/Statements/distinct.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/Statements/select.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/001_select.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/002_distinct.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/003_where.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/004_order_by.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/005_like.sql" dialect="MySQL" />
   </component>
 </project>
