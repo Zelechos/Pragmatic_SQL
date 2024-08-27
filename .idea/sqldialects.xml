@@ -6,5 +6,15 @@
     <file url="file://$PROJECT_DIR$/Statements/003_where.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/Statements/004_order_by.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/Statements/005_like.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/006_and_or_not.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/007_limit.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/008_null.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/009_min_max.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/010_count.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/011_sum.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/012_avg.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/013_in.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/014_between.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Statements/015_alias.sql" dialect="MySQL" />
   </component>
 </project>
